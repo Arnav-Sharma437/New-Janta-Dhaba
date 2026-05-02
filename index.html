@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0D0D0D" />
-  <meta name="description" content="Mandyali Dham — Authentic Himachali Dham catering in Mandi. Ghar jaisa swaad, events ke liye." />
-  <title>Mandyali Dham | Authentic Himachali Dham | Mandi</title>
+  <meta name="description" content="Mandyali Dham — 100% vegetarian authentic Himachali Dham. New Janta Dhaba, Padhar Mandi. Ghar jaisa swaad, events & tiffin." />
+  <title>Mandyali Dham · 100% Veg Himachali Dham | New Janta Dhaba · Mandi</title>
+  <link rel="icon" href="assets/logo-mark.png" type="image/png" />
+  <link rel="preload" as="image" href="assets/hero-thali.png" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -32,22 +34,39 @@
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-media" role="img" aria-label="Himachali thali and traditional serving"></div>
+    <section class="hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-media" aria-hidden="true">
+        <div class="hero-media-bg">
+          <img
+            class="hero-bg-img"
+            src="assets/hero-thali.png"
+            alt=""
+            width="1920"
+            height="1080"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero-media-scrim"></div>
+      </div>
       <div class="hero-steam" aria-hidden="true"></div>
       <div class="hero-spices" aria-hidden="true">
         <span class="spice"></span><span class="spice"></span><span class="spice"></span>
       </div>
       <div class="hero-content">
-        <p class="hero-eyebrow reveal-hero">Padhar · Mandi · Himachal</p>
+        <p class="veg-badge reveal-hero">
+          <span class="veg-badge-icon" aria-hidden="true">🌿</span>
+          <span class="veg-badge-text"><strong>100% शाकाहारी</strong> · Pure vegetarian · Egg-free</span>
+        </p>
+        <p class="hero-eyebrow reveal-hero">New Janta Dhaba · Padhar · Mandi · Himachal</p>
         <h1 id="hero-heading" class="hero-title">
           <span class="title-line reveal-hero">Authentic Mandyali Dham,</span>
           <span class="title-line accent reveal-hero">Taste of Himachal</span>
         </h1>
-        <p class="hero-sub reveal-hero">Ghar jaisa swaad, ab aapke events ke liye bhi</p>
+        <p class="hero-sub reveal-hero">Ghar jaisa swaad — sirf shudh veg Dham. Events, functions &amp; tiffin.</p>
         <div class="hero-actions reveal-hero">
           <a class="btn btn-primary" href="#" data-wa-order>Order Now</a>
-          <a class="btn btn-outline" href="tel:+919876543210">Call Us</a>
+          <a class="btn btn-outline" href="tel:+917018263937">Call Us</a>
         </div>
       </div>
       <div class="hero-scroll" aria-hidden="true">
@@ -55,17 +74,36 @@
       </div>
     </section>
 
+    <!-- Visual strip — authentic bites -->
+    <section class="flavor-strip" aria-label="Dhaba aur Dham ki jhalak">
+      <div class="flavor-strip-inner">
+        <figure class="flavor-card" data-reveal>
+          <img src="assets/dhaba-storefront.png" alt="Brass handi aur New Janta Dhaba — Special Dham" width="800" height="600" loading="lazy" decoding="async" />
+          <figcaption>Brass · parampara</figcaption>
+        </figure>
+        <figure class="flavor-card flavor-card-wide" data-reveal>
+          <img src="assets/thali-outdoor.png" alt="Taazi veg thali — chawal, kadhi, dal aur sabzi" width="900" height="675" loading="lazy" decoding="async" />
+          <figcaption>Taaza thali — seedhi rasoi se</figcaption>
+        </figure>
+        <figure class="flavor-card" data-reveal>
+          <img src="assets/dham-platter-top.png" alt="Poora Mandyali Dham — sab veg katoriyan" width="800" height="600" loading="lazy" decoding="async" />
+          <figcaption>Poora Dham — sirf veg</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <!-- Menu -->
     <section class="section menu-section" id="menu" aria-labelledby="menu-heading">
       <div class="container">
         <header class="section-head">
+          <p class="veg-pill" data-reveal><span aria-hidden="true">✦</span> Total veg kitchen — Mandyali Dham tradition</p>
           <h2 id="menu-heading" class="section-title">Our Dham Menu</h2>
-          <p class="section-lead">Har dish dil se — parampara ka asli swaad</p>
+          <p class="section-lead">Har dish dil se — parampara ka asli swaad. <em>Maas, anda, machhi — bilkul nahi.</em></p>
         </header>
         <div class="menu-grid">
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=640&q=75" alt="Steamed rice in bowl" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="assets/food-rice.png" alt="Steamed rice — veg Dham" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Chawal</h3>
@@ -73,7 +111,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=640&q=75" alt="Indian curry dish" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="assets/food-curry.png" alt="Sepu Badi — veg Himachali dish" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Sepu Badi</h3>
@@ -81,7 +119,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=640&q=75" alt="Rajma curry" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="assets/food-dal.png" alt="Rajmah — slow cooked veg" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Rajmah</h3>
@@ -89,7 +127,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=640&q=75" alt="Chana dish" width="640" height="480" loading="lazy" decoding="async" />
+              <img class="menu-photo-offset" src="assets/dham-platter-top.png" alt="Chane ka khatta — veg thali style" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Chane ka Khatta</h3>
@@ -97,7 +135,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=640&q=75" alt="Paneer dish" width="640" height="480" loading="lazy" decoding="async" />
+              <img src="assets/thali-outdoor.png" alt="Paneer — taaza veg Dham" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Paneer</h3>
@@ -105,7 +143,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=640&q=75" alt="Dal tadka" width="640" height="480" loading="lazy" decoding="async" />
+              <img class="menu-photo-offset menu-photo-offset--tr" src="assets/hero-thali.png" alt="Chane ki dal — ghee wali veg dal" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Chane ki Dal</h3>
@@ -113,7 +151,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=640&q=75" alt="Kadhi bowl" width="640" height="480" loading="lazy" decoding="async" />
+              <img class="menu-photo-offset menu-photo-offset--br" src="assets/food-curry.png" alt="Kadhi — yellow veg kadhi" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Kadhi</h3>
@@ -121,7 +159,7 @@
           </article>
           <article class="menu-card" data-reveal>
             <div class="menu-card-media">
-              <img src="https://images.unsplash.com/photo-1604329760669-e8dc22f33036?w=640&q=75" alt="Mah ki dal slow cooked" width="640" height="480" loading="lazy" decoding="async" />
+              <img class="menu-photo-offset menu-photo-offset--bl" src="assets/food-dal.png" alt="Mah ki dal — kaali dal veg" width="640" height="480" loading="lazy" decoding="async" />
               <div class="menu-steam" aria-hidden="true"></div>
             </div>
             <h3 class="menu-card-title">Mah ki Dal</h3>
@@ -136,9 +174,9 @@
       <div class="container">
         <header class="section-head">
           <h2 id="services-heading" class="section-title">Special Services</h2>
-          <p class="section-lead">Har occasion ke liye — timing perfect, swaad ghar jaisa</p>
+          <p class="section-lead">Har occasion ke liye — timing perfect, swaad ghar jaisa. Lunch · catering · <strong>tiffin</strong>.</p>
         </header>
-        <div class="services-grid">
+        <div class="services-grid services-grid--five">
           <article class="service-card" data-reveal>
             <div class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 48 48" fill="none"><path d="M24 8l16 8v16l-16 8-16-8V16l16-8z" stroke="currentColor" stroke-width="1.5"/><path d="M24 16v16M16 20l16 8M32 20l-16 8" stroke="currentColor" stroke-width="1.2" opacity=".6"/></svg>
@@ -167,6 +205,13 @@
             <h3 class="service-title">Local Event Catering</h3>
             <p class="service-desc">Mandi aur aas-paas — jagah chhoti ho ya badi, seva ek jaisi.</p>
           </article>
+          <article class="service-card service-card-featured" data-reveal>
+            <div class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none"><path d="M14 12h20l2 8v16a4 4 0 01-4 4H16a4 4 0 01-4-4V20l2-8z" stroke="currentColor" stroke-width="1.5"/><path d="M18 20h12M18 26h12M18 32h8" stroke="currentColor" stroke-width="1.2" opacity=".65"/></svg>
+            </div>
+            <h3 class="service-title">Tiffin suvidha</h3>
+            <p class="service-desc">Roz ka veg khana — office / college ke liye packed swaad, Padhar &amp; nazdeeki ilake.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -177,14 +222,14 @@
       <div class="container about-layout">
         <div class="about-visual" data-reveal>
           <div class="about-frame">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=720&q=75" alt="Warm kitchen and spices" width="720" height="900" loading="lazy" decoding="async" />
+            <img src="assets/dhaba-interior.png" alt="New Janta Dhaba — mehmaan aur veg thali" width="720" height="900" loading="lazy" decoding="async" />
           </div>
           <div class="about-accent"></div>
         </div>
         <div class="about-copy">
           <h2 id="about-heading" class="section-title" data-reveal>Hamare haath ka swaad — parampara se juda hua</h2>
-          <p class="about-lead" data-reveal>Mandyali Dham sirf khana nahi — yeh Himachal ki mehmaan-nawazi hai. Hamari rasoi me mitti ki khushboo hai, brass bartanon ki chamak hai, aur har plate par ghar ka pyar.</p>
-          <p class="about-text" data-reveal>Padhar ke paas, Taxi Stand ke nazdeek — jahan se log guzarte hain, wahi se swaad ki pehchan shuru hoti hai. Events ho ya mann ka khana, hum wahi taste dete hain jo ghar par nani dadi banati thi.</p>
+          <p class="about-lead" data-reveal>Mandyali Dham sirf khana nahi — yeh Himachal ki mehmaan-nawazi hai. <strong>Poora menu shudh shakahari:</strong> hamari rasoi me brass bartanon ki chamak hai, aur har plate par ghar ka pyar.</p>
+          <p class="about-text" data-reveal>Ratan Jewelers / Taxi Stand ke paas, Main Padhar — jahan se log guzarte hain, wahi se swaad ki pehchan shuru hoti hai. Events ho, tiffin ho ya mann ka khana, hum wahi veg taste dete hain jo ghar par nani dadi banati thi.</p>
           <blockquote class="about-quote" data-reveal>
             <p>“Premium presentation, desi dil.”</p>
           </blockquote>
@@ -257,15 +302,16 @@
           <div class="location-card" data-reveal>
             <h3 class="location-card-title">Address</h3>
             <address class="location-address">
-              Main Padhar, near Taxi Stand,<br />
-              Mandi (Himachal Pradesh), India
+              Near Ratan Jewelers / Taxi Stand,<br />
+              Main Padhar, Mandi (HP) 175012,<br />
+              Himachal Pradesh, India
             </address>
-            <a class="btn btn-outline btn-small" href="https://maps.google.com/?q=Main+Padhar+Mandi+Himachal+Pradesh" target="_blank" rel="noopener noreferrer">Open in Maps</a>
+            <a class="btn btn-outline btn-small" href="https://maps.google.com/?q=Near+Ratan+Jewelers+Taxi+Stand+Padhar+Mandi+175012" target="_blank" rel="noopener noreferrer">Open in Maps</a>
           </div>
           <div class="map-embed" data-reveal>
             <iframe
               title="Mandyali Dham location map"
-              src="https://maps.google.com/maps?q=Main+Padhar%2C+Mandi%2C+Himachal+Pradesh&output=embed"
+              src="https://maps.google.com/maps?q=Padhar+Mandi+175012+Himachal+Pradesh&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen
@@ -281,16 +327,16 @@
         <div class="footer-brand">
           <span class="logo-mark">म</span>
           <strong>Mandyali Dham</strong>
-          <p class="footer-tag">Authentic Himachali Dham · Mandi</p>
+          <p class="footer-tag">New Janta Dhaba · 100% veg Himachali Dham · Mandi</p>
         </div>
         <div class="footer-block">
           <h3 class="footer-heading">Hours</h3>
-          <p>Mon–Sun: 9:00 AM – 9:00 PM<br /><span class="muted">Catering by appointment</span></p>
+          <p>Open daily · closes evening<br /><span class="muted">Call to confirm · Catering &amp; tiffin</span></p>
         </div>
         <div class="footer-block">
           <h3 class="footer-heading">Contact</h3>
           <p>
-            <a href="tel:+919876543210">+91 98765 43210</a><br />
+            <a href="tel:+917018263937">070182 63937</a><br />
             <a href="#" data-wa-order>WhatsApp order</a>
           </p>
         </div>
@@ -300,7 +346,7 @@
 
   <!-- Sticky CTA -->
   <div class="sticky-cta" id="contact-bar" role="navigation" aria-label="Quick contact">
-    <a class="sticky-btn sticky-call" href="tel:+919876543210">
+    <a class="sticky-btn sticky-call" href="tel:+917018263937">
       <span class="sticky-icon" aria-hidden="true">📞</span>
       <span>Call Now</span>
     </a>

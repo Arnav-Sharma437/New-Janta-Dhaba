@@ -1,9 +1,9 @@
 (function () {
   "use strict";
 
-  /** Update with your real WhatsApp number (country code, no + or spaces) */
-  var WA_PHONE = "919876543210";
-  var WA_DEFAULT_TEXT = "Namaste, mujhe Mandyali Dham order karna hai";
+  /** WhatsApp number — country code, no + or spaces */
+  var WA_PHONE = "917018263937";
+  var WA_DEFAULT_TEXT = "Namaste, mujhe Mandyali Dham order karna hai (veg)";
 
   function waUrl(extra) {
     var text = WA_DEFAULT_TEXT + (extra ? "\n\n" + extra : "");
@@ -140,11 +140,58 @@
     });
   }
 
+  /** Banner background blur intensifies as user scrolls down (mobile + desktop) */
+  function initHeroScrollBlur() {
+    var hero = document.getElementById("hero");
+    var bgImg = document.querySelector(".hero-bg-img");
+    var scrim = document.querySelector(".hero-media-scrim");
+    if (!hero || !bgImg) return;
+
+    var reduced =
+      window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) {
+      hero.style.setProperty("--hero-scroll", "0");
+      return;
+    }
+
+    var maxBlurPx = 22;
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var h = hero.offsetHeight || 1;
+      var y = window.scrollY || window.pageYOffset || 0;
+      /** 0 at top → ~1 when user has scrolled most of the hero */
+      var p = Math.min(1, Math.max(0, y / (h * 0.72)));
+      hero.style.setProperty("--hero-scroll", String(p));
+
+      var blur = p * maxBlurPx;
+      bgImg.style.filter = "blur(" + blur + "px)";
+      bgImg.style.transform = "scale(" + (1.06 + p * 0.06) + ")";
+
+      if (scrim) {
+        scrim.style.opacity = String(0.78 + p * 0.18);
+      }
+    }
+
+    function onScroll() {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(update);
+      }
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", update, { passive: true });
+    update();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     bindWhatsAppLinks();
     initInquiryForm();
     initScrollReveal();
     initTestimonials();
     initSmoothAnchors();
+    initHeroScrollBlur();
   });
 })();
