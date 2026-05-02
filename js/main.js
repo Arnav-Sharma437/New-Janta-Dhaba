@@ -3,7 +3,7 @@
 
   /** WhatsApp number — country code, no + or spaces */
   var WA_PHONE = "917018263937";
-  var WA_DEFAULT_TEXT = "Namaste, mujhe Mandyali Dham order karna hai (veg)";
+  var WA_DEFAULT_TEXT = "Namaste, mujhe New Janta Dhaba se veg order karna hai";
 
   function waUrl(extra) {
     var text = WA_DEFAULT_TEXT + (extra ? "\n\n" + extra : "");
@@ -130,6 +130,7 @@
   function initSmoothAnchors() {
     document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
       anchor.addEventListener("click", function (e) {
+        if (anchor.hasAttribute("data-wa-order")) return;
         var id = anchor.getAttribute("href");
         if (!id || id === "#") return;
         var target = document.querySelector(id);

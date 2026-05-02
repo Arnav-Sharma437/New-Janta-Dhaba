@@ -108,6 +108,29 @@ a:hover {
   gap: 0.75rem;
 }
 
+@media (min-width: 768px) {
+  .header-inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .logo {
+    justify-self: start;
+    min-width: 0;
+  }
+
+  .nav {
+    justify-self: center;
+  }
+
+  .header-cta {
+    justify-self: end;
+    flex-shrink: 0;
+  }
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -116,8 +139,22 @@ a:hover {
   text-decoration: none;
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
   letter-spacing: 0.02em;
+  min-width: 0;
+}
+
+.logo-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 52vw;
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    max-width: none;
+  }
 }
 
 .logo:hover {
@@ -1252,13 +1289,15 @@ a:hover {
 }
 
 @media (min-width: 1024px) {
+  /* Avoid transform on fixed bar — fixes overlap / viewport bugs on desktop Safari/Chrome */
   .sticky-cta {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
     bottom: 1.25rem;
-    width: auto;
-    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    max-width: min(28rem, calc(100vw - 2rem));
     border-radius: 14px;
     border: 1px solid rgba(201, 161, 74, 0.25);
     padding: 0.5rem;
