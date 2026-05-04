@@ -2,7 +2,7 @@
   "use strict";
 
   /** WhatsApp number — country code, no + or spaces */
-  var WA_PHONE = "917018263937";
+  var WA_PHONE = "919418957569";
   var WA_DEFAULT_TEXT = "Namaste, mujhe New Janta Dhaba se veg order karna hai";
 
   function waUrl(extra) {
